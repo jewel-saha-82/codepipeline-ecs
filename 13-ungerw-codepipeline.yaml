@@ -29,23 +29,23 @@ Parameters:
     GitHubUser:
         Description: Enter GitHub username of the repository owner
         Type: String  
-        Default: wolfgangunger
+        Default: jewel-saha-82
 
     KMSKeyId:
         Type: String
         Description: KMS Key ID CodePipeline artifacts on S3 (ARN)
-        Default: arn:aws:kms:eu-central-1:016973021151:key/3f96cd76-77fa-484c-8a9a-2c882e93d5b3
+        Default: arn:aws:kms:ap-south-1:271009710463:key/ec3e8576-7151-4371-a647-809970bee7fa
         
         
     ArtifactStoreS3Bucket:
         Type: String
         Description: Name of the S3 bucket to store CodePipeline artificats.
-        Default: codepipeline-eu-central-1-343319948364
+        Default: codepipeline-ap-south-1-492250561684
         
     NetworkStack:
         Type: String
         Description: ECS network stack name
-        Default: ecs-cluster
+        Default: ecs
         
     Service:
         Type: String
@@ -55,12 +55,12 @@ Parameters:
     Cluster:
         Type: String
         Description: Name of the cluster
-        Default: ecs-cluster-ECSCluster-CLUWD3E5U6LG
+        Default: ecs-ECSCluster-80RoRih2DbGc
 
     CodePipelineRoleARN:
         Type: String
         Description: ARN  of CodePipeline Service Role
-        Default: arn:aws:iam::016973021151:role/AWS-CodePipeline-Service
+        Default: arn:aws:iam::271009710463:role/service-role/AWSCodePipelineServiceRole-ap-south-1-ecs-pipeline
 
 
 ######################################################################################
@@ -214,7 +214,7 @@ Resources:
             Environment:
                 Type: LINUX_CONTAINER
                 ComputeType: BUILD_GENERAL1_SMALL
-                Image: aws/codebuild/java:openjdk-8
+                Image: aws/codebuild/java:corretto8
                 EnvironmentVariables:
                 - Name: 'PIPELINE_STACK'
                   Value: !Ref 'AWS::StackName'
