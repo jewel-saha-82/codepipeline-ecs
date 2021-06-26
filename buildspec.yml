@@ -10,6 +10,9 @@ phases:
     commands:
       - echo Maven Build ...
       - mvn clean package
+      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 271009710463.dkr.ecr.ap-south-1.amazonaws.com
+      - docker build -f src/main/docker/Dockerfile -t 271009710463.dkr.ecr.ap-south-1.amazonaws.com/simple-docker-project-example:springboot .
+      - docker push 271009710463.dkr.ecr.ap-south-1.amazonaws.com/simple-docker-project-example:springboot
 
        
 artifacts:

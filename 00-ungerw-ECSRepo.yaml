@@ -7,7 +7,7 @@ Resources:
   ECSRepo:    
     Type: "AWS::ECR::Repository"
     Properties: 
-      RepositoryName: ecs-repository
+      RepositoryName: simple-docker-project-example
 
  
 #####################################################################################
