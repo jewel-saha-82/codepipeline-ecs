@@ -16,7 +16,7 @@ public class HelloWorldService {
     @GET
     @Path("/hello")
     public Response test() {
-        return Response.status(200).entity("Hello Cloud Gurus V4.0 ").build();
+        return Response.status(200).entity("Hello Cloud Gurus V2.0 ").build();
     }
 
 }
