@@ -214,7 +214,9 @@ Resources:
             Environment:
                 Type: LINUX_CONTAINER
                 ComputeType: BUILD_GENERAL1_SMALL
-                Image: aws/codebuild/java:openjdk-8
+                Image: aws/codebuild/standard:5.0
+                ImagePullCredentialsType: CODEBUILD
+                PrivilegedMode: true
                 EnvironmentVariables:
                 - Name: 'PIPELINE_STACK'
                   Value: !Ref 'AWS::StackName'
