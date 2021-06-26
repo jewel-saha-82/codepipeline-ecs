@@ -22,7 +22,7 @@ Parameters:
     Description: A name for the service
   ImageUrl:
     Type: String
-    Default: 016973021151.dkr.ecr.us-west-1.amazonaws.com/ecs-example-repository:spring-boot
+    Default: 271009710463.dkr.ecr.ap-south-1.amazonaws.com/simple-docker-project-example:springboot
     Description: The url of a docker image 
     
   ContainerPort:
