@@ -214,7 +214,7 @@ Resources:
             Environment:
                 Type: LINUX_CONTAINER
                 ComputeType: BUILD_GENERAL1_SMALL
-                Image: aws/codebuild/java:corretto8
+                Image: aws/codebuild/java:openjdk-8
                 EnvironmentVariables:
                 - Name: 'PIPELINE_STACK'
                   Value: !Ref 'AWS::StackName'
